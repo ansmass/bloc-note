@@ -1,0 +1,20 @@
+<div class="note-container">
+  <section class="note-list">
+    <article class="note" *ngFor="let note of notes" (click)="getNote(note)">
+      <h2 class="note__title">{{ note.title }}</h2>
+      <p class="note__content">{{ note.content }}</p>
+      <div class="note-bottom">
+  
+        <p class="note-bottom__category" title="{{note.category}}">
+          <span class="badge {{ note.category | notesCategory }}"></span>
+          {{ note.category }}
+        </p>
+        <p class="note-bottom__date">{{ note.date_numeric }}</p>
+      </div>
+    </article>
+  </section>
+  
+  <div class="note-details">
+    <app-notes-details [notes]="selectedNote"></app-notes-details>
+  </div>
+</div>

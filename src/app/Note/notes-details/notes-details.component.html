@@ -1,0 +1,9 @@
+<article class="details-container" *ngIf="notes">
+     <section class="details-container__creating">
+          <p class="creating__date">{{ notes.date_letter }}</p>
+          <p>à</p>
+          <p class="creating__hours">{{ notes.hours }}</p>
+     </section>
+     <h2 class="details-container__title">{{ notes.title }}</h2>
+     <p class="details-container__content">{{ notes.content }}</p>
+</article>

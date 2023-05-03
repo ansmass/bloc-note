@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+// Font
+@font-face {
+     font-family: "SF-Pro";
+     src: url(./assets/SFPro/SF-Pro.ttf);
+}
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     font-family: "SF-Pro", sans-serif;
+     color: #454545;
+}

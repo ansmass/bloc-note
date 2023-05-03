@@ -1,0 +1,98 @@
+.note-container{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+}
+
+.note-list {
+  padding-top: 1em;
+
+  width: 20%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-y: scroll;
+
+  .note {
+    margin-bottom: 1em;
+    padding: .5em 0;
+
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    border-bottom: 1px solid #E6E6E6;
+    cursor: pointer;
+
+    &:hover{
+      .note__title{
+        text-decoration: underline;
+      }
+    }
+
+    &__title {
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    &__content {
+      margin: 0.3em 0;
+      
+      font-size: 12px;
+      color: #999999;
+
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      font-size: 12px;
+
+      &__category {
+        display: flex;
+        align-items: center;
+
+        color: #999999;
+
+        > .badge {
+          margin-right: 0.5em;
+
+          width: 6px;
+          height: 6px;
+
+          border-radius: 50%;
+        }
+      }
+
+      &__date {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.note-details{
+  width: 75%;
+}
+
+// Pipes color
+.red {
+  background-color: #a80e0e;
+}
+.orange {
+  background-color: #fda511;
+}
+.blue {
+  background-color: #0f63bf;
+}
